@@ -14,7 +14,7 @@
 	<name>peopleservice</name>
 	<description>Service for the Bookalaya application to perform operations on  the user and employee data.</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

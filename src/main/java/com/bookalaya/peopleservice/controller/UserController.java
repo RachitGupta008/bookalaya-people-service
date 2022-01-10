@@ -13,8 +13,12 @@ import java.util.List;
 @RequestMapping("/api/user")
 public class UserController {
 
-    @Autowired
-    UserService service;
+    final UserService service;
+
+    public UserController(UserService service) {
+        this.service = service;
+    }
+
     @GetMapping(path = "/find/{id}")
     public User getUser(@PathVariable String id){
        return service.findUserById(id);
@@ -29,5 +33,7 @@ public class UserController {
     public User createUser(@RequestBody User user){
         return service.createUser(user);
     }
+
+
 
 }
