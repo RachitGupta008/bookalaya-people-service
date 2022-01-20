@@ -20,7 +20,11 @@ public class UserService {
     }
 
     public User createUser(User user){
-        return userRepository.save(user);
+        System.out.println("Saving user.......");
+        User user1 =  userRepository.save(user);
+        System.out.println("Saved user.......");
+        return user1;
+
     }
     public List<User> findAll(){
         return userRepository.findAll();
